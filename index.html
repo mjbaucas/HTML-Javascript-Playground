@@ -2,19 +2,42 @@
 <html>
 <head>
 	<title>Playground</title>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+	
+	<!-- 	<script
+		  src="https://code.jquery.com/jquery-3.1.1.min.js"
+		  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		  crossorigin="anonymous">
+		</script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
-	<div>
-		<h1>Jayson</h1>
+	<!-- Title -->
+	<div class="title">
+		<h1>Title of Page</h1>
 	</div>
-	<div>
-		<button>Aler</button>
+
+	<!-- Body -->
+	<div class="body">
+		<h4>Sub Header</h4>
+		<p style="background-color:orange"> This is a story </p>
+		<p> This is another story </p>
+
+	</div>
+
+	<!-- Footer -->
+	<div class="footer">
+		<button class="btn btn-default" onclick="test('Jayson')">Alert</button>
 	</div>
 </body>
 
 <script>
-	function test(){
-		alert("Hello");
+	function test(name){
+		alert(name);
 	}
 </script>
 </html>

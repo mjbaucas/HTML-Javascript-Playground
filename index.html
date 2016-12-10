@@ -6,14 +6,21 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+		<!-- local js -->
+		<script src="index.js" crossorigin="anonymous"></script>
 	
-	<!-- 	<script
+		<!-- jQuery -->
+		<script
 		  src="https://code.jquery.com/jquery-3.1.1.min.js"
 		  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 		  crossorigin="anonymous">
 		</script>
 
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
+		<!-- Bootsctrap js --> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 	<!-- Title -->
@@ -31,13 +38,40 @@
 
 	<!-- Footer -->
 	<div class="footer">
-		<button class="btn btn-default" onclick="test('Jayson')">Alert</button>
+		<input type="number" class="form-control" id="numberOne">
+		<input type="number" class="form-control" id="numberTwo">
+		<button class="btn btn-default" onclick="calculate('add')">Calculate</button>
+		<button class="btn btn-default" onclick="calculate('subtract')">Calculate</button>
 	</div>
 </body>
 
 <script>
-	function test(name){
-		alert(name);
+	function calculate(type){
+		var numberOne = parseInt($("#numberOne").val());
+		var numberTwo = parseInt($("#numberTwo").val());
+		console.log(numberOne, numberTwo);
+		var answer;
+
+		if(type == "add"){
+			answer = add(numberOne, numberTwo);
+		}
+		else if(type == "subtract"){
+			answer = subtract(numberOne, numberTwo);
+		}
+		
+		console.log(answer);
+	}
+
+	function add (a,b){
+		var c;
+		c = a + b;
+		return c;
+	}
+
+	function subtract (a,b){
+		var c;
+		c = a - b;
+		return c;
 	}
 </script>
 </html>
